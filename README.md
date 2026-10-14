@@ -1,4 +1,4 @@
-# EMPREGA MAIS
+# EMPREGA+
 ### Projeto colaborativo de alunos da Residência Full-Stack.
 
 Desenvolvimento de soluções tech e culturais a partir de atividades de Design Thinking
