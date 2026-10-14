@@ -1,6 +1,8 @@
 # EMPREGA+
 ### Projeto colaborativo de alunos da Residência Full-Stack.
 
+### Stack: Java,Spring,SupaBase,TS e React
+
 Desenvolvimento de soluções tech e culturais a partir de atividades de Design Thinking
 
 #### O problema: 
