@@ -49,3 +49,9 @@ database=postgres
 user=postgres.sbutvxsphkyyrngtgpiz
 
 jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres?user=postgres.sbutvxsphkyyrngtgpiz&password=[YOUR-PASSWORD]
+
+.env
+
+DB_PASSWORD = senha
+
+${DB_PASSWORD}
