@@ -35,6 +35,9 @@ EMPREGADO
 	- Curriculo.
 # Conexão com SupaBase:
 
+Documentação auxiliar:
+https://medium.com/@luizfelper/criando-uma-api-usando-o-supabase-com-java-spring-boot-38512ebdb2b
+
 senha: Empregamais
 
 host=aws-0-us-east-1.pooler.supabase.com
