@@ -36,3 +36,8 @@ EMPREGADO
 # Conexão com SupaBase:
 
 senha: Empregamais
+host=aws-0-us-east-1.pooler.supabase.com
+port=5432
+database=postgres
+user=postgres.sbutvxsphkyyrngtgpiz
+jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres?user=postgres.sbutvxsphkyyrngtgpiz&password=[YOUR-PASSWORD]
