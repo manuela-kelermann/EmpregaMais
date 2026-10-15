@@ -33,3 +33,6 @@ EMPREGADO
 	- Experiências;
 	- Links de github e portfólio;
 	- Curriculo.
+# Conexão com SupaBase:
+
+senha: Empregamais
