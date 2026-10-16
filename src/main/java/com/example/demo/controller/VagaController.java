@@ -2,9 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.dtos.VagaRespostaDTO;
 import com.example.demo.dtos.VagaSalvarDTO;
-import com.example.demo.model.Permissoes;
+import com.example.demo.security.Permissoes;
 import com.example.demo.service.VagaService;
-import jakarta.persistence.Id;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
