@@ -3,7 +3,7 @@ package com.example.demo.dtos;
 import com.example.demo.model.ModalidadeEnum;
 
 public record VagaRespostaDTO(
-        long id,
+        Long id,
         String titulo,
         String localidade,
         ModalidadeEnum modalidadeEnum,
@@ -12,5 +12,6 @@ public record VagaRespostaDTO(
         String responsabilidadeAtribuicoes,
         String requisitosTecnicos,
         String beneficios,
-        String candidatarSe
+        String candidatarSe,
+        Long areaDaVaga
 ) { }

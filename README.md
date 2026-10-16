@@ -55,3 +55,16 @@ jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres?user=postgre
 DB_PASSWORD = senha
 
 ${DB_PASSWORD}
+
+
+## Qual status usar em cada operação da sua API?
+
+### Endpoints — Vaga
+
+| Método | Caminho        | Descrição                  | Sucesso        | Erros             |
+|--------|----------------|----------------------------|----------------|-------------------|
+| GET    | `/vagas`       | Lista todas as vagas       | 200 - OK       | —                 |
+| GET    | `/vagas/{id}`  | Busca uma vaga pelo id     | 200 - OK       | 404 - NOT_FOUND   |
+| POST   | `/vagas`      | Cadastra uma nova vaga     | 201  - CREATED | 400 - BAD_REQUEST |
+| PUT    | `/vagas/{id}` | Atualiza uma vaga existente | 200 - OK       | 404 - NOT_FOUND   |
+| DELETE | `/vagas/{id}` | Remove uma vagaa           | 204 - NO_CONTENT| 404 - NOT_FOUND            |

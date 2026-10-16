@@ -18,7 +18,7 @@ public class Vaga {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "titulo")
     private String titulo;
@@ -33,13 +33,13 @@ public class Vaga {
     @Column(name = "descricao")
     private String descricao;
 
-    @Column(name = "escolarida")
+    @Column(name = "escolaridade")
     private String escolaridade;
 
     @Column(name = "responsabilidade_atribuicao")
     private String responsabilidadeAtribuicoes;
 
-    @Column(name = "responsabilidade_tecnicos")
+    @Column(name = "requisitos_tecnicos")
     private String requisitosTecnicos;
 
     @Column(name = "beneficios")
@@ -47,6 +47,9 @@ public class Vaga {
 
     @Column(name = "candidatar_se")
     private String candidatarSe;
+
+    @Column(name = "id_areas_das_vagas")
+    private Long areaDaVaga;
 
 
 }

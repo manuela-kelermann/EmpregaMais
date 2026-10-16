@@ -3,16 +3,17 @@ package com.example.demo.dtos;
 import com.example.demo.model.ModalidadeEnum;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public record VagaSalvarDTO(
 
         @NotBlank(message = "Titulo da vaga não pode ser vazio!")
-        long id,
+        String titulo,
 
         @NotBlank(message = "Localidade da vaga não pode ser vazia!")
         String localidade,
 
-        @NotBlank(message = "Modalidade da vaga não pode ser vazia!")
+        @NotNull(message = "Modalidade da vaga não pode ser vazia!")
         ModalidadeEnum modalidadeEnum,
 
         @NotBlank(message = "Descrição da vaga não pode ser vazia!")
@@ -31,7 +32,10 @@ public record VagaSalvarDTO(
         String beneficios,
 
         @NotBlank(message = "O link de redirecionamento da vaga é obrigatório!")
-        String candidatarSe
+        String candidatarSe,
+
+        @NotNull(message = "Selecionar uma area para a vaga é obrigatório!")
+         Long areaDaVaga
 
 ) {
 }

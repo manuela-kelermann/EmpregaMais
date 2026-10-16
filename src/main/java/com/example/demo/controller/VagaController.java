@@ -4,6 +4,7 @@ import com.example.demo.dtos.VagaRespostaDTO;
 import com.example.demo.dtos.VagaSalvarDTO;
 import com.example.demo.model.Permissoes;
 import com.example.demo.service.VagaService;
+import jakarta.persistence.Id;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,14 +22,12 @@ public class VagaController {
     private final VagaService vagaService;
 
 
-
+    @PreAuthorize(Permissoes.VAGAS_EDITAR)
     @PostMapping
     public ResponseEntity<VagaRespostaDTO> criar(@RequestBody @Valid  VagaSalvarDTO dto){
     VagaRespostaDTO salvo = vagaService.criar(dto);
     return ResponseEntity.status(HttpStatus.CREATED).body(salvo);
     }
-
-
 
 
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
@@ -38,5 +37,14 @@ public class VagaController {
         return ResponseEntity.status(HttpStatus.OK).body(vagas);
 
     }
+
+    @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable("id") Long id){
+        vagaService.deletar(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
+    }
+
 
 }
