@@ -38,24 +38,7 @@ EMPREGADO
 Documentação auxiliar:
 https://medium.com/@luizfelper/criando-uma-api-usando-o-supabase-com-java-spring-boot-38512ebdb2b
 
-senha: Empregamais
-
-host=aws-0-us-east-1.pooler.supabase.com
-
-port=5432
-
-database=postgres
-
-user=postgres.sbutvxsphkyyrngtgpiz
-
-jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres?user=postgres.sbutvxsphkyyrngtgpiz&password=[YOUR-PASSWORD]
-
-.env
-
-DB_PASSWORD = senha
-
-${DB_PASSWORD}
-
+Informações no properties quem sobem pelo Git e .env que é criado localmente...
 
 ## Qual status usar em cada operação da sua API?
 
