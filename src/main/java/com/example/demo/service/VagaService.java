@@ -34,6 +34,33 @@ public class VagaService {
     }
 
     @Transactional
+    public VagaRespostaDTO atualizar(Long id, VagaSalvarDTO dto){
+
+        Vaga vaga = vagaRepository.findById(id).orElseThrow(() ->
+                        new EntityNotFoundException( "Vaga com id " + id + " não encontrada!"));
+
+            dtoToEntity(vaga, dto);
+
+            Vaga vagaAtualizada = vagaRepository.save(vaga);
+
+        return entityToRespostaDTO(vagaAtualizada);
+    }
+
+
+    @Transactional
+    public VagaRespostaDTO buscarPorId(Long id){
+        Vaga vaga = vagaRepository.findById(id)
+                .orElseThrow(() ->
+                        new EntityNotFoundException(
+                                "Vaga com id " + id + " não encontrada!"
+                        )
+                );
+        return entityToRespostaDTO(vaga);
+
+    }
+
+
+    @Transactional
     public void deletar(Long id){
         if(!vagaRepository.existsById(id)){
 

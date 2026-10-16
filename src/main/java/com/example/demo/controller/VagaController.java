@@ -38,6 +38,22 @@ public class VagaController {
 
     }
 
+    @PreAuthorize(Permissoes.VAGAS_EDITAR)
+    @PutMapping("/{id}")
+    public ResponseEntity<VagaRespostaDTO> atualizar(@PathVariable("id") Long id, @RequestBody @Valid VagaSalvarDTO dto){
+        VagaRespostaDTO atualizada = vagaService.atualizar(id,dto);
+        return ResponseEntity.status(HttpStatus.OK).body(atualizada);
+    }
+
+
+
+    @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
+    @GetMapping("/{id}")
+    public ResponseEntity<VagaRespostaDTO> buscarPorId(@PathVariable("id") Long id){
+        VagaRespostaDTO vaga = vagaService.buscarPorId(id);
+        return ResponseEntity.status(HttpStatus.OK).body(vaga);
+    }
+
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable("id") Long id){
@@ -45,6 +61,8 @@ public class VagaController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 
     }
+
+
 
 
 }
