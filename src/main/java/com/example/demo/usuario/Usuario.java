@@ -2,6 +2,7 @@ package com.example.demo.usuario;
 
 import com.example.demo.usuario.permissoes.Perfil;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +30,7 @@ public class Usuario implements UserDetails {
     @Column(name = "nome", length = 100, nullable = false)
     private String nome;
 
+    @Email
     @Column(name = "email", length = 100, nullable = false, unique = true)
     private String email;
 

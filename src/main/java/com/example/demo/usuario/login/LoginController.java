@@ -1,15 +1,18 @@
 package com.example.demo.usuario.login;
 
+import com.example.demo.controller.TratadorGlobal;
 import com.example.demo.usuario.permissoes.PerfiRespository;
 import com.example.demo.usuario.permissoes.Perfil;
 import com.example.demo.usuario.Usuario;
 import com.example.demo.usuario.Usuariorepository;
 import com.example.demo.usuario.dtos.AutenticadorDTO;
 import com.example.demo.usuario.dtos.CriarContaDTO;
+import jakarta.persistence.EntityExistsException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -40,7 +43,7 @@ public class LoginController {
     public ResponseEntity<Void> criar(@RequestBody @Valid CriarContaDTO dto) {
 
         if (this.usuariorepository.findByEmail(dto.email()) != null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+            throw  new EntityExistsException("Ja existe uma conta com o email: " + dto.email());
         }
 
         Perfil perfil = perfiRespository.findById(dto.idPerfil()).get();
