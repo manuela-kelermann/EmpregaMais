@@ -1,4 +1,4 @@
-package com.example.demo.security;
+package com.example.demo.usuario.permissoes;
 
 public final class Permissoes {
 

@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dtos.VagaRespostaDTO;
 import com.example.demo.dtos.VagaSalvarDTO;
-import com.example.demo.security.Permissoes;
+import com.example.demo.usuario.permissoes.Permissoes;
 import com.example.demo.service.VagaService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

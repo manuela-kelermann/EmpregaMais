@@ -1,4 +1,4 @@
-package com.example.demo.security;
+package com.example.demo.usuario.permissoes;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,16 +7,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "permissoes")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "permissoes")
 public class Permissao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    @Column(name = "id_permissoes")
+    private Long id;
 
     @Column(name = "modulo", length = 50)
     String modulo;

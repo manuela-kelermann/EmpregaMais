@@ -1,5 +1,5 @@
 
-package com.example.demo.security;
+package com.example.demo.usuario.permissoes;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
