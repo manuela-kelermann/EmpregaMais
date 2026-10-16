@@ -33,12 +33,17 @@ EMPREGADO
 	- Experiências;
 	- Links de github e portfólio;
 	- Curriculo.
+    - 
 # Conexão com SupaBase:
+
+crie um arquivo .env para criar a variavel de ambiente com:
+{DB_URL}= Url do supaBase
+{DB_USERNAME} = Usuario do supaBase
+{DB_PASSWORD}= Senha do supaBase
 
 Documentação auxiliar:
 https://medium.com/@luizfelper/criando-uma-api-usando-o-supabase-com-java-spring-boot-38512ebdb2b
 
-Informações no properties quem sobem pelo Git e .env que é criado localmente...
 
 ## Qual status usar em cada operação da sua API?
 
