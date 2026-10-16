@@ -6,9 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
-import java.sql.SQLTransactionRollbackException;
 
 @Entity
 @Table(name = "vagas")
@@ -41,7 +39,7 @@ public class Vaga {
     @Column(name = "responsabilidade_atribuicao")
     private String responsabilidadeAtribuicoes;
 
-    @Column(name = "responsabilidade_atribuicao")
+    @Column(name = "responsabilidade_tecnicos")
     private String requisitosTecnicos;
 
     @Column(name = "beneficios")
