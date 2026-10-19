@@ -16,6 +16,11 @@ public record VagaSalvarDTO(
         @NotNull(message = "Modalidade da vaga não pode ser vazia!")
         ModalidadeEnum modalidadeEnum,
 
+        @NotBlank(message = "Piso de Salário é obrigatório!")
+        Double pisoSalario,
+
+        Double tetoSalario,
+
         @NotBlank(message = "Descrição da vaga não pode ser vazia!")
         String descricao,
 

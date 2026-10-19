@@ -45,7 +45,6 @@ public class VagaController {
     }
 
 
-
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
     @GetMapping("/{id}")
     public ResponseEntity<VagaRespostaDTO> buscarPorId(@PathVariable("id") Long id){

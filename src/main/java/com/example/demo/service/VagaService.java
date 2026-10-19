@@ -75,6 +75,8 @@ public class VagaService {
                 vaga.setTitulo(dto.titulo());
                 vaga.setLocalidade(dto.localidade());
                 vaga.setModalidadeEnum(dto.modalidadeEnum());
+                vaga.setPisoSalario(dto.pisoSalario());
+                vaga.setTetoSalario(dto.tetoSalario());
                 vaga.setDescricao(dto.descricao());
                 vaga.setEscolaridade(dto.escolaridade());
                 vaga.setResponsabilidadeAtribuicoes(dto.responsabilidadeAtribuicoes());
@@ -95,6 +97,8 @@ public class VagaService {
                 vaga.getTitulo(),
                 vaga.getLocalidade(),
                 vaga.getModalidadeEnum(),
+                vaga.getPisoSalario(),
+                vaga.getTetoSalario(),
                 vaga.getDescricao(),
                 vaga.getEscolaridade(),
                 vaga.getResponsabilidadeAtribuicoes(),

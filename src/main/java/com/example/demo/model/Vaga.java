@@ -30,6 +30,12 @@ public class Vaga {
     @Enumerated(EnumType.STRING)
     private ModalidadeEnum modalidadeEnum;
 
+    @Column(name = "piso_salario")
+    private Double pisoSalario;
+
+    @Column(name = "teto_salario")
+    private Double tetoSalario;
+
     @Column(name = "descricao")
     private String descricao;
 
