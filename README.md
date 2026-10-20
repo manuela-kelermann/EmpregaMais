@@ -37,8 +37,11 @@ EMPREGADO
 # Conexão com SupaBase:
 
 crie um arquivo .env para criar a variavel de ambiente com:
+
 DB_UR=Url do supaBase
+
 DB_USERNAME=Usuario do supaBase
+
 DB_PASSWORD=Senha do supaBase
 
 Documentação auxiliar:
