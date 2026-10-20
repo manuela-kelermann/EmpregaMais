@@ -37,9 +37,12 @@ EMPREGADO
 # Conexão com SupaBase:
 
 crie um arquivo .env para criar a variavel de ambiente com:
-{DB_URL}= Url do supaBase
-{DB_USERNAME} = Usuario do supaBase
-{DB_PASSWORD}= Senha do supaBase
+
+DB_UR=Url do supaBase
+
+DB_USERNAME=Usuario do supaBase
+
+DB_PASSWORD=Senha do supaBase
 
 Documentação auxiliar:
 https://medium.com/@luizfelper/criando-uma-api-usando-o-supabase-com-java-spring-boot-38512ebdb2b
