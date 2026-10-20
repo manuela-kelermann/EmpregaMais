@@ -13,4 +13,5 @@ public interface VagaRepository extends JpaRepository<Vaga, Long> {
 
 
 
+
 }

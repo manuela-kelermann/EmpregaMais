@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-import com.example.demo.controller.TratadorGlobal;
 import com.example.demo.dtos.VagaRespostaDTO;
 import com.example.demo.dtos.VagaSalvarDTO;
 import com.example.demo.model.Vaga;
