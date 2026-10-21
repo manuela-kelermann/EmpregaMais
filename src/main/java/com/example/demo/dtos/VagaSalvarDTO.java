@@ -1,6 +1,7 @@
 package com.example.demo.dtos;
 
 import com.example.demo.model.ModalidadeEnum;
+import com.example.demo.model.StatusEnum;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -15,6 +16,9 @@ public record VagaSalvarDTO(
 
         @NotNull(message = "Modalidade da vaga não pode ser vazia!")
         ModalidadeEnum modalidadeEnum,
+
+        @NotNull(message = "Status da vaga não pode ser vazio!")
+        StatusEnum status,
 
         @NotBlank(message = "Piso de Salário é obrigatório!")
         Double pisoSalario,
