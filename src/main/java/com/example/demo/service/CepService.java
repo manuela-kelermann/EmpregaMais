@@ -1,7 +1,9 @@
+
 package com.example.demo.service;
 
 import com.example.demo.dtos.CepRespostaDTO;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.server.ResponseStatusException;
@@ -12,9 +14,10 @@ public class CepService {
 
     private final RestClient restClient;
 
-    public CepService(RestClient.Builder builder) {
-        this.restClient = builder
-                .baseUrl("https://brasilapi.com.br")
+
+    public CepService() {
+        this.restClient = RestClient.builder()
+                .baseUrl("https://brasilapi.com.br/api")
                 .build();
     }
 
@@ -32,6 +35,13 @@ public class CepService {
                     .uri("/cep/v1/{cep}", cep)
                     .retrieve()
                     .body(CepRespostaDTO.class);
+
+        } catch (HttpClientErrorException.NotFound exception) {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND,
+                    "CEP não encontrado.",
+                    exception
+            );
 
         } catch (RestClientException exception) {
             throw new ResponseStatusException(

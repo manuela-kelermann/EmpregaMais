@@ -1,21 +1,21 @@
 package com.example.demo.dtos;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 
 public record CepRespostaDTO(
 
         String cep,
 
-        @JsonProperty("state")
-        String estado,
+       @JsonAlias("state")
+       String estado,
 
-        @JsonProperty("city")
+       @JsonAlias("city")
         String cidade,
 
-        @JsonProperty("neighborhood")
+       @JsonAlias("neighborhood")
         String bairro,
 
-        @JsonProperty("street")
+       @JsonAlias("street")
         String rua
 
 ) {
