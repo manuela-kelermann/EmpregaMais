@@ -1,6 +1,7 @@
 package com.example.demo.dtos;
 
 import com.example.demo.model.ModalidadeEnum;
+import com.example.demo.model.StatusEnum;
 import jakarta.persistence.Column;
 
 public record VagaRespostaDTO(
@@ -8,6 +9,7 @@ public record VagaRespostaDTO(
         String titulo,
         String localidade,
         ModalidadeEnum modalidadeEnum,
+        StatusEnum status,
         Double pisoSalario,
         Double tetoSalario,
         String descricao,

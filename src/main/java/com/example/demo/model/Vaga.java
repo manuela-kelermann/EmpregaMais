@@ -1,10 +1,8 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 
 
 @Entity
@@ -13,6 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Vaga {
 
     @Id
@@ -28,6 +27,11 @@ public class Vaga {
     @Column(name = "modalidade")
     @Enumerated(EnumType.STRING)
     private ModalidadeEnum modalidadeEnum;
+
+    @Column(name = "status_vaga")
+    @Enumerated(EnumType.STRING)
+    @Builder.Default
+    private StatusEnum status = StatusEnum.ABERTA;
 
     @Column(name = "piso_salario")
     private Double pisoSalario;
