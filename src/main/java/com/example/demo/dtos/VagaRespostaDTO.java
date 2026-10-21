@@ -2,7 +2,6 @@ package com.example.demo.dtos;
 
 import com.example.demo.model.ModalidadeEnum;
 import com.example.demo.model.StatusEnum;
-import jakarta.persistence.Column;
 
 public record VagaRespostaDTO(
         Long id,

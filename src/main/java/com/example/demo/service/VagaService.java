@@ -96,6 +96,7 @@ public class VagaService {
                 vaga.getTitulo(),
                 vaga.getLocalidade(),
                 vaga.getModalidadeEnum(),
+                vaga.getStatus(),
                 vaga.getPisoSalario(),
                 vaga.getTetoSalario(),
                 vaga.getDescricao(),
