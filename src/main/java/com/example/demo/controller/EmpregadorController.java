@@ -40,5 +40,16 @@ public class EmpregadorController {
         return ResponseEntity.status(HttpStatus.OK).body(atualizado);
     }
 
+    @PreAuthorize(Permissoes.EMPREGADOR_VISUALIZAR)
+    @GetMapping("/{id}")
+    public ResponseEntity<EmpregadorRespostaDTO> buscarPorId(@PathVariable("id") Long id){
+        EmpregadorRespostaDTO empregador = empregadorService.buscarPorId(id);
+        return  ResponseEntity.status(HttpStatus.OK).body(empregador);
+    }
+
+
+
+
+
 
 }

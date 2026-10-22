@@ -3,7 +3,9 @@ package com.example.demo.service;
 import com.example.demo.dtos.CepRespostaDTO;
 import com.example.demo.dtos.EmpregadorRespostaDTO;
 import com.example.demo.dtos.EmpregadorSalvarDTO;
+import com.example.demo.dtos.VagaRespostaDTO;
 import com.example.demo.model.Empregador;
+import com.example.demo.model.Vaga;
 import com.example.demo.repository.EmpregadorRepository;
 import com.example.demo.usuario.Usuario;
 import jakarta.persistence.EntityNotFoundException;
@@ -38,6 +40,18 @@ public class EmpregadorService {
         dtoToEntity(dto, empregador);
 
         return entityToDto(empregadorRepository.save(empregador));
+    }
+
+    @Transactional
+    public EmpregadorRespostaDTO buscarPorId(Long id){
+        Empregador empregador = empregadorRepository.findById(id)
+                .orElseThrow(() ->
+                        new EntityNotFoundException(
+                                "Empregador com id " + id + " não encontrada!"
+                        )
+                );
+        return entityToDto(empregador);
+
     }
 
     private Empregador dtoToEntity(EmpregadorSalvarDTO dto, Empregador empregador) {
