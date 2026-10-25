@@ -1,5 +1,7 @@
 package com.example.demo.dtos;
 
-public record AreasDasVagasDTO(String nomeArea) {
+import jakarta.validation.constraints.NotBlank;
 
-}
+public record AreasDasVagasDTO(
+        @NotBlank(message = "O nome da área é obrigatório") String nome_area
+) {}

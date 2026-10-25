@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.dtos.AreasDasVagasDTO;
 import com.example.demo.model.AreasDasVagas;
 import com.example.demo.service.AreasDasVagasService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +40,7 @@ public class AreasDasVagasController {
     }
 
     @PostMapping
-    public ResponseEntity<AreasDasVagas> criar(@RequestBody AreasDasVagasDTO dto) {
+    public ResponseEntity<AreasDasVagas> criar(@Valid @RequestBody AreasDasVagasDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.criar(dto));
     }
 
