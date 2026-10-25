@@ -20,5 +20,5 @@ public class AreasDasVagas {
     private Long id_areas_das_vagas;
 
     @Column (name = "nome_area")
-    private String nome_area;
+    private String nomeArea;
 }
