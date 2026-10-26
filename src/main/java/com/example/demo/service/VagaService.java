@@ -64,7 +64,7 @@ public class VagaService {
     //procura vagas cujo título contenha o texto informado e retorna uma lista de DTOs
     @Transactional(readOnly = true)
     public List<VagaRespostaDTO> pesquisarPorTitulo(String titulo) {
-        return vagaRepository.findByTituloVagaContainingIgnoreCase(titulo)
+        return vagaRepository.findByTituloContainingIgnoreCase(titulo)
                 .stream()
                 .map(this::entityToRespostaDTO)
                 .collect(Collectors.toList());
@@ -72,7 +72,7 @@ public class VagaService {
 
     @Transactional(readOnly = true)
     public List<VagaRespostaDTO> pesquisarPorModalidade(ModalidadeEnum modalidadeEnum){
-        return vagaRepository.findByModalidade(modalidadeEnum)
+        return vagaRepository.findByModalidadeEnum(modalidadeEnum)
                 .stream()
                 .map(this::entityToRespostaDTO)
                 .collect(Collectors.toList());

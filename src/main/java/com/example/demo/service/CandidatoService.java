@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.dtos.CandidatoRespostaDTO;
 import com.example.demo.dtos.CandidatoSalvarDTO;
+import com.example.demo.model.AreasDasVagas;
 import com.example.demo.model.Candidato;
 import com.example.demo.repository.CandidatoRepository;
 import com.example.demo.usuario.Usuario;
@@ -67,10 +68,7 @@ public class CandidatoService {
         return entityToDto(candidato);
     }
 
-    private Candidato dtoToEntity(
-            CandidatoSalvarDTO dto,
-            Candidato candidato
-    ) {
+    private Candidato dtoToEntity( CandidatoSalvarDTO dto, Candidato candidato ) {
         candidato.setNome(dto.nome());
         candidato.setFoto(dto.foto());
         candidato.setNascimento(dto.nascimento());
@@ -87,7 +85,10 @@ public class CandidatoService {
                 candidato.getNascimento(),
                 candidato.getEscolaridade(),
                 candidato.getUsuario().getId(),
-                candidato.getAreaDaVaga()
+                candidato.getAreasDeInteresse()
+                        .stream()
+                        .map(AreasDasVagas::getId)
+                        .toList()
         );
     }
 }

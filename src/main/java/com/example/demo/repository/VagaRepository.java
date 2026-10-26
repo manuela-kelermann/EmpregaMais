@@ -17,11 +17,11 @@ public interface VagaRepository extends JpaRepository<Vaga, Long> {
 
     Optional<Vaga> findByTituloIgnoreCase(String titulo);
 
-    List<Vaga> findByTituloVagaContainingIgnoreCase(String titulo);
+    List<Vaga> findByTituloContainingIgnoreCase(String titulo);
 
     List<Vaga> findByLocalidade(String localidade);
 
-    List<Vaga> findByModalidade(ModalidadeEnum modalidadeEnum);
+    List<Vaga> findByModalidadeEnum(ModalidadeEnum modalidadeEnum);
 
     List<Vaga> findByStatus(StatusEnum statusEnum);
 

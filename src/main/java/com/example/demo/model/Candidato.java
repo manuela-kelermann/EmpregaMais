@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -18,6 +20,7 @@ import java.time.LocalDate;
 public class Candidato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_candidatos")
     private Long id;
 
     @Column(name = "nome")
@@ -36,7 +39,12 @@ public class Candidato {
     @JoinColumn(name = "id_usuarios", nullable = false)
     private Usuario usuario;
 
-    @Column(name = "id_areas_das_vagas")
-    private Long areaDaVaga;
+    @ManyToMany
+    @JoinTable(
+            name = "candidatos_areas_vagas",
+            joinColumns = @JoinColumn(name = "id_candidatos"),
+            inverseJoinColumns = @JoinColumn(name = "id_areas_das_vagas")
+    )
+    private List<AreasDasVagas> areasDeInteresse = new ArrayList<>();
 
 }

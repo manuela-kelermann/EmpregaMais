@@ -4,6 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public record CandidatoSalvarDTO(
         @NotBlank
@@ -20,6 +21,7 @@ public record CandidatoSalvarDTO(
         @NotNull
         Long idUsuario,
 
-        Long areaDaVaga
+        List<Long> areasDeInteresse
+
 ) {
 }

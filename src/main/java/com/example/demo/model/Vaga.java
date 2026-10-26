@@ -16,6 +16,7 @@ public class Vaga {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_vagas")
     private Long id;
 
     @Column(name = "titulo")
