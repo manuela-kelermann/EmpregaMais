@@ -2,6 +2,9 @@ package com.example.demo.controller;
 
 import com.example.demo.dtos.VagaRespostaDTO;
 import com.example.demo.dtos.VagaSalvarDTO;
+import com.example.demo.model.ModalidadeEnum;
+import com.example.demo.model.StatusEnum;
+import com.example.demo.model.Vaga;
 import com.example.demo.usuario.permissoes.Permissoes;
 import com.example.demo.service.VagaService;
 import jakarta.validation.Valid;
@@ -29,7 +32,7 @@ public class VagaController {
     }
 
 
-    @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
+
     @GetMapping
     public ResponseEntity<List<VagaRespostaDTO>> listarTodos(){
         List<VagaRespostaDTO> vagas = vagaService.listarTodos();
@@ -52,15 +55,44 @@ public class VagaController {
         return ResponseEntity.status(HttpStatus.OK).body(vaga);
     }
 
+
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
+    @GetMapping("/pesquisa")
+    public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorTitulo(@RequestParam String titulo) {
+        List<VagaRespostaDTO> vagas = vagaService.pesquisarPorTitulo(titulo);
+        return ResponseEntity.status(HttpStatus.OK).body(vagas);
+    }
+
+
+    @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
+    @GetMapping("/abertas")
+    public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorStatus(){
+        List<VagaRespostaDTO> vagas = vagaService.pesquisarPorStatus();
+        return ResponseEntity.status(HttpStatus.OK).body(vagas);
+    }
+
+    @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
+    @GetMapping("/localizacao")
+    public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorLocalidade(@RequestParam String localizacao) {
+        List<VagaRespostaDTO> vagas = vagaService.pesquisarPorLocalidade(localizacao);
+        return ResponseEntity.status(HttpStatus.OK).body(vagas);
+    }
+
+    @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
+    @GetMapping("/modalidade")
+    public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorModalidade(@RequestParam ModalidadeEnum modalidadeEnum) {
+        List<VagaRespostaDTO> vagas = vagaService.pesquisarPorModalidade(modalidadeEnum);
+        return ResponseEntity.status(HttpStatus.OK).body(vagas);
+    }
+
+
+    @PreAuthorize(Permissoes.VAGAS_EDITAR)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable("id") Long id){
         vagaService.deletar(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 
     }
-
-
 
 
 }

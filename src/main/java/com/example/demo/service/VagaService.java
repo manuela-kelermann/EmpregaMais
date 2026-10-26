@@ -2,9 +2,12 @@ package com.example.demo.service;
 
 import com.example.demo.dtos.VagaRespostaDTO;
 import com.example.demo.dtos.VagaSalvarDTO;
+import com.example.demo.model.ModalidadeEnum;
+import com.example.demo.model.StatusEnum;
 import com.example.demo.model.Vaga;
 import com.example.demo.repository.VagaRepository;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.persistence.EnumType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -57,6 +60,40 @@ public class VagaService {
         return entityToRespostaDTO(vaga);
 
     }
+
+    //procura vagas cujo título contenha o texto informado e retorna uma lista de DTOs
+    @Transactional(readOnly = true)
+    public List<VagaRespostaDTO> pesquisarPorTitulo(String titulo) {
+        return vagaRepository.findByTituloVagaContainingIgnoreCase(titulo)
+                .stream()
+                .map(this::entityToRespostaDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<VagaRespostaDTO> pesquisarPorModalidade(ModalidadeEnum modalidadeEnum){
+        return vagaRepository.findByModalidade(modalidadeEnum)
+                .stream()
+                .map(this::entityToRespostaDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<VagaRespostaDTO> pesquisarPorLocalidade(String localidade){
+        return vagaRepository.findByLocalidade(localidade)
+                .stream()
+                .map(this::entityToRespostaDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<VagaRespostaDTO> pesquisarPorStatus(){
+        return vagaRepository.findByStatus(StatusEnum.ABERTA)
+                .stream()
+                .map(this::entityToRespostaDTO)
+                .collect(Collectors.toList());
+    }
+
 
 
     @Transactional
