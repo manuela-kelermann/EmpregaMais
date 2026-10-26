@@ -3,9 +3,11 @@ package com.example.demo.controller;
 import com.example.demo.dtos.AreasDasVagasDTO;
 import com.example.demo.model.AreasDasVagas;
 import com.example.demo.service.AreasDasVagasService;
+import com.example.demo.usuario.permissoes.Permissoes;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,6 +41,7 @@ public class AreasDasVagasController {
         return service.pesquisarPorNome(nome);
     }
 
+    @PreAuthorize(Permissoes.AREA_DA_VAGA_SALVAR)
     @PostMapping
     public ResponseEntity<AreasDasVagas> criar(@Valid @RequestBody AreasDasVagasDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.criar(dto));
@@ -49,6 +52,7 @@ public class AreasDasVagasController {
         return service.atualizar(id, dto);
     }
 
+    @PreAuthorize(Permissoes.AREA_DA_VAGA_EXCLUIR)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
         service.deletar(id);
