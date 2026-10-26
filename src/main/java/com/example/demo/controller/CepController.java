@@ -2,8 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.dtos.CepRespostaDTO;
 import com.example.demo.service.CepService;
+import com.example.demo.usuario.permissoes.Permissoes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

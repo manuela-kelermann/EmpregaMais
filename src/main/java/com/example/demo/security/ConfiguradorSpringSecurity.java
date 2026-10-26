@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -16,28 +17,20 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity
 public class ConfiguradorSpringSecurity {
 
     @Bean
-
-
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
-        return httpSecurity
-                .csrf(csrf ->csrf.disable())
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers(HttpMethod.POST, "/login/criar").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/cep/v1/**").permitAll()
-                        .requestMatchers("/error").permitAll()   // <- adicione
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                        .requestMatchers("/empregador").permitAll()
-                        .requestMatchers("/empregador/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/vagas").hasRole(Permissoes.VAGAS_EDITAR)
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .csrf(csrf -> csrf.disable()) // Desabilitado para facilitar testes via Postman
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/login", "/usuario/cadastrar").permitAll()
                         .anyRequest().authenticated()
-                )
-                .build();
+                );
+        return http.build();
     }
+
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception{

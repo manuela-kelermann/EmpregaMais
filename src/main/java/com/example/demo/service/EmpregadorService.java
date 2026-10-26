@@ -13,6 +13,9 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class EmpregadorService {
@@ -22,8 +25,6 @@ public class EmpregadorService {
 
     @Transactional
     public EmpregadorRespostaDTO cadastrar(EmpregadorSalvarDTO dto, Usuario usuario) {
-
-
 
         Empregador empregador = dtoToEntity(dto, new Empregador());
         empregador.setUsuario(usuario);
@@ -43,6 +44,14 @@ public class EmpregadorService {
     }
 
     @Transactional
+    public List<EmpregadorRespostaDTO> listarTodos(){
+        return empregadorRepository.findAllByOrderByIdDesc()
+                .stream()
+                .map(this::entityToDto).collect(Collectors.toList());
+    }
+
+
+    @Transactional
     public EmpregadorRespostaDTO buscarPorId(Long id){
         Empregador empregador = empregadorRepository.findById(id)
                 .orElseThrow(() ->
@@ -58,7 +67,6 @@ public class EmpregadorService {
 
         String cepLimpo = dto.cep().replaceAll("\\D", "");
 
-        // novo empregador (cep nulo) ou CEP alterado: busca o endereço
         if (!cepLimpo.equals(empregador.getCep())) {
             CepRespostaDTO endereco = cepService.buscarLocalizacao(cepLimpo);
 

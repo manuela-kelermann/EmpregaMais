@@ -2,12 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.dtos.EmpregadorRespostaDTO;
 import com.example.demo.dtos.EmpregadorSalvarDTO;
-import com.example.demo.dtos.VagaRespostaDTO;
-import com.example.demo.dtos.VagaSalvarDTO;
-import com.example.demo.model.Empregador;
 import com.example.demo.service.EmpregadorService;
 import com.example.demo.usuario.Usuario;
-import com.example.demo.usuario.permissoes.Permissao;
 import com.example.demo.usuario.permissoes.Permissoes;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/empregador")
@@ -45,6 +43,13 @@ public class EmpregadorController {
     public ResponseEntity<EmpregadorRespostaDTO> buscarPorId(@PathVariable("id") Long id){
         EmpregadorRespostaDTO empregador = empregadorService.buscarPorId(id);
         return  ResponseEntity.status(HttpStatus.OK).body(empregador);
+    }
+
+    @PreAuthorize(Permissoes.EMPREGADOR_VISUALIZAR_TODOS)
+    @GetMapping
+    public ResponseEntity<List<EmpregadorRespostaDTO>> listarTodos(){
+    List<EmpregadorRespostaDTO> empregadores = empregadorService.listarTodos();
+    return ResponseEntity.status(HttpStatus.OK).body(empregadores);
     }
 
 

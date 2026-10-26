@@ -1,6 +1,6 @@
 package com.example.demo.usuario.dtos;
 
-public record CriarContaDTO(
+public record CriarSalvarUsuarioDTO(
         String nome,
         String email,
         String senha,
