@@ -57,7 +57,7 @@ public class VagaController {
 
 
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
-    @GetMapping("/pesquisa")
+    @GetMapping("/pesquisa-titulo")
     public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorTitulo(@RequestParam String titulo) {
         List<VagaRespostaDTO> vagas = vagaService.pesquisarPorTitulo(titulo);
         return ResponseEntity.status(HttpStatus.OK).body(vagas);
@@ -65,21 +65,21 @@ public class VagaController {
 
 
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
-    @GetMapping("/abertas")
+    @GetMapping("/pesquisa-status")
     public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorStatus(){
         List<VagaRespostaDTO> vagas = vagaService.pesquisarPorStatus();
         return ResponseEntity.status(HttpStatus.OK).body(vagas);
     }
 
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
-    @GetMapping("/localizacao")
+    @GetMapping("/pesquisa-localizacao")
     public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorLocalidade(@RequestParam String localizacao) {
         List<VagaRespostaDTO> vagas = vagaService.pesquisarPorLocalidade(localizacao);
         return ResponseEntity.status(HttpStatus.OK).body(vagas);
     }
 
     @PreAuthorize(Permissoes.VAGAS_VISUALIZAR)
-    @GetMapping("/modalidade")
+    @GetMapping("/pesquisa-modalidade")
     public ResponseEntity<List<VagaRespostaDTO>> pesquisarPorModalidade(@RequestParam ModalidadeEnum modalidadeEnum) {
         List<VagaRespostaDTO> vagas = vagaService.pesquisarPorModalidade(modalidadeEnum);
         return ResponseEntity.status(HttpStatus.OK).body(vagas);

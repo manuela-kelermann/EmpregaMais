@@ -26,6 +26,7 @@ public class ConfiguradorSpringSecurity {
                 .csrf(csrf -> csrf.disable()) // Desabilitado para facilitar testes via Postman
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/usuario/cadastrar").permitAll()
+                        .requestMatchers("/swagger-ui/**", "/swagger-ui.html","/v3/api-docs/**").permitAll()
                         .anyRequest().authenticated()
                 );
         return http.build();
