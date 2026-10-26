@@ -33,6 +33,8 @@ public class ConfiguradorSpringSecurity {
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers("/empregador").permitAll()
                         .requestMatchers("/empregador/**").permitAll()
+                        .requestMatchers("/areas/**").permitAll()
+                        .requestMatchers("/areas").permitAll()
                         .requestMatchers(HttpMethod.POST, "/vagas").hasRole(Permissoes.VAGAS_EDITAR)
                         .anyRequest().authenticated()
                 )

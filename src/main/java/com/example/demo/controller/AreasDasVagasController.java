@@ -27,7 +27,7 @@ public class AreasDasVagasController {
     }
 
     @GetMapping("/{id}")
-    public AreasDasVagas buscar(@PathVariable Long id) {
+    public AreasDasVagas buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
 
@@ -37,7 +37,7 @@ public class AreasDasVagasController {
     }
 
     @GetMapping("/pesquisa")
-    public List<AreasDasVagas> pesquisar(@RequestParam String nome) {
+    public List<AreasDasVagas> pesquisarPorNome(@RequestParam String nome) {
         return service.pesquisarPorNome(nome);
     }
 
