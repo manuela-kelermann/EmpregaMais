@@ -22,4 +22,5 @@ public class AreasDasVagas {
 
     @Column (name = "nome_area")
     private String nomeArea;
+
 }
