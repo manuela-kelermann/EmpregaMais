@@ -1,6 +1,7 @@
 package com.example.demo.dtos;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public record CandidatoRespostaDTO (
         Long id,
@@ -9,6 +10,6 @@ public record CandidatoRespostaDTO (
         LocalDate nascimento,
         String escolaridade,
         Long idUsuario,
-        Long areaDaVaga
+        List<Long> areasDeInteresse
 ){
 }

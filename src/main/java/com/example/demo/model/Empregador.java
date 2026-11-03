@@ -17,6 +17,7 @@ import lombok.Setter;
 public class Empregador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_empregadores")
     private Long id;
 
     @Column(name = "nome_empresa")
