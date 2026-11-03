@@ -32,10 +32,7 @@ public class CandidatoService {
     }
 
     @Transactional
-    public CandidatoRespostaDTO atualizar(
-            Long id,
-            CandidatoSalvarDTO dto
-    ) {
+    public CandidatoRespostaDTO atualizar(Long id, CandidatoSalvarDTO dto) {
         Candidato candidato = candidatoRepository.findById(id)
                 .orElseThrow(() ->
                         new EntityNotFoundException(
