@@ -4,6 +4,7 @@ import com.example.demo.dtos.AreasDasVagasDTO;
 import com.example.demo.service.AreasDasVagasService;
 import com.example.demo.usuario.permissoes.Permissoes;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -13,12 +14,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/areas")
+@RequiredArgsConstructor
 public class AreasDasVagasController {
     private final AreasDasVagasService service;
 
-    public AreasDasVagasController(AreasDasVagasService service) {
-        this.service = service;
-    }
+
 
     @PreAuthorize(Permissoes.AREA_DA_VAGA_LISTAR)
     @GetMapping

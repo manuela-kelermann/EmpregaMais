@@ -17,7 +17,8 @@ public class AreasDasVagas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_areas_das_vagas;
+    @Column(name = "id_areas_das_vagas")
+    private Long id;
 
     @Column (name = "nome_area")
     private String nomeArea;

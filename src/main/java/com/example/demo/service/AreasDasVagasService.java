@@ -3,18 +3,16 @@ package com.example.demo.service;
 import com.example.demo.dtos.AreasDasVagasDTO;
 import com.example.demo.model.AreasDasVagas;
 import com.example.demo.repository.AreasDasVagasRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class AreasDasVagasService {
 
     private final AreasDasVagasRepository repository;
-
-    public AreasDasVagasService(AreasDasVagasRepository repository) {
-        this.repository = repository;
-    }
 
     private AreasDasVagasDTO paraDTO(AreasDasVagas area) {
         return new AreasDasVagasDTO(area.getNomeArea());
