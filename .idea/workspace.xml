@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2e94f519-3563-47bc-bec3-59e824dd2218" name="Alterações" comment="Pasta de front criada no rep. para rodar o backend abra apenas a pasta de back no intelij e a de front no vs" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+        <option value="Enum" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev-kayque" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KayqueLeoterio&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:manuela-kelermann/EmpregaMais.git&quot;,
+    &quot;accountId&quot;: &quot;a6b1764a-c21c-47fa-9599-8f35e5e621f1&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3KgfS46ta3Ei7sOdiSc3ZOYy79P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Aplicação.DemoApplication.executor": "Run",
+    "JUnit.CandidatoServiceTest.deveAtualizarCandidatoComSucesso.executor": "Run",
+    "JUnit.CandidatoServiceTest.deveBuscarCandidatoExistente.executor": "Run",
+    "JUnit.CandidatoServiceTest.deveLancarExcecaoAoBuscarCandidatoInexistente.executor": "Run",
+    "JUnit.CandidatoServiceTest.executor": "Run",
+    "JUnit.CandidatoServiceTest.naoDeveAtualizarQuandoNomeForInvalido.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ResTIC55/Desktop/EmpregaMais",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ResTIC55\Desktop\EmpregaMais" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ResTIC55\Desktop\EmpregaMais" />
+      <recent name="C:\Users\ResTIC55\Desktop\EmpregaMais\backend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CandidatoServiceTest.deveBuscarCandidatoExistente">
+    <configuration name="CandidatoServiceTest.deveBuscarCandidatoExistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.CandidatoServiceTest" />
+      <option name="METHOD_NAME" value="deveBuscarCandidatoExistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CandidatoServiceTest.deveLancarExcecaoAoBuscarCandidatoInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.CandidatoServiceTest" />
+      <option name="METHOD_NAME" value="deveLancarExcecaoAoBuscarCandidatoInexistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CandidatoServiceTest.naoDeveAtualizarQuandoNomeForInvalido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.CandidatoServiceTest" />
+      <option name="METHOD_NAME" value="naoDeveAtualizarQuandoNomeForInvalido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="EmpregaMais" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="EmpregaMais" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CandidatoServiceTest.deveBuscarCandidatoExistente" />
+        <item itemvalue="JUnit.CandidatoServiceTest.naoDeveAtualizarQuandoNomeForInvalido" />
+        <item itemvalue="JUnit.CandidatoServiceTest.deveLancarExcecaoAoBuscarCandidatoInexistente" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Tarefa padrão">
+      <changelist id="2e94f519-3563-47bc-bec3-59e824dd2218" name="Alterações" comment="" />
+      <created>1791984127672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791984127672</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Adicionei o a dependencia do Spring Securuty ao projeto">
+      <option name="closed" value="true" />
+      <created>1792000362132</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792000362132</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Estrutura principal de MVC Criado;&#10;Conexão com SupaBase feito no application.properties;&#10;Inicio do desenvolvimento do Api de Vagas com Entity, dtos e Enum">
+      <option name="closed" value="true" />
+      <created>1792107183644</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792107183644</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Estrutura principal de MVC Criado;&#10;Conexão com SupaBase feito no application.properties;&#10;Inicio do desenvolvimento do Api de Vagas com Entity, dtos e Enum">
+      <option name="closed" value="true" />
+      <created>1792116079340</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1792116079340</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Atualização do README e desenvolvimento De vagas GET, POST e DELETE">
+      <option name="closed" value="true" />
+      <created>1792121510335</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1792121510335</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Atualização do README para conexão com supaBAse">
+      <option name="closed" value="true" />
+      <created>1792121631298</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1792121631298</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Atualização do README para conexão com supaBAse">
+      <option name="closed" value="true" />
+      <created>1792122550381</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1792122550381</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Atualização do README para conexão com supaBAse">
+      <option name="closed" value="true" />
+      <created>1792122557238</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1792122557238</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Crud completo de Vagas funcionando, faltando apenas terminar o tratamento de erros">
+      <option name="closed" value="true" />
+      <created>1792125056288</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1792125056288</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Configurando o sistema de Roles e permitions dos Usuarios Admin,Empregador e Candidato ( ja inseri as permissoes de vagas ao banco)">
+      <option name="closed" value="true" />
+      <created>1792172274989</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1792172274989</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Sistema de login e criptografia de senha funcionando... Falta apenas criar sistema de tokwn">
+      <option name="closed" value="true" />
+      <created>1792192560608</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1792192560608</updated>
+    </task>
+    <task id="LOCAL-00011" summary="entidades de usuario e empregador criadas">
+      <option name="closed" value="true" />
+      <created>1792416967075</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1792416967075</updated>
+    </task>
+    <task id="LOCAL-00012" summary="entidades de usuario e empregador criadas">
+      <option name="closed" value="true" />
+      <created>1792417001034</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1792417001034</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Atualização das vagas com Salario piso-teto">
+      <option name="closed" value="true" />
+      <created>1792422215030</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1792422215030</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Atualização do spring security liberando o swagger.">
+      <option name="closed" value="true" />
+      <created>1792520371531</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1792520371532</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Atualização da entidade de vagas agora tem StatusEnum.ABERTA e StatusEnum.ENCERRADA e é default Aberta">
+      <option name="closed" value="true" />
+      <created>1792590373638</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1792590373638</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Atualização da VagaService agora esta passando status no dtoToentity e entityToDTO">
+      <option name="closed" value="true" />
+      <created>1792596850596</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1792596850596</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Sempre que um empregador é criado a API de CEP é consumida e preenche os campos necessarios.&#10;Endpoint de Empregador criado POST E PUT falta o GET">
+      <option name="closed" value="true" />
+      <created>1792607430302</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1792607430303</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Get empregador/id foi desenvolvido e foi adicionado mais 12 Permissoes e ja foram inseridas no banco de dados.">
+      <option name="closed" value="true" />
+      <created>1792633394308</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1792633394308</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Login sem JWT funcionando e listar todos os empregadores">
+      <option name="closed" value="true" />
+      <created>1793022788891</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1793022788891</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Login sem JWT funcionando e listar todos os empregadores">
+      <option name="closed" value="true" />
+      <created>1793030294228</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1793030294228</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Pesquisa de titulo, modalidade, status da vaga aberta desenvolvidos.">
+      <option name="closed" value="true" />
+      <created>1793035112751</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1793035112751</updated>
+    </task>
+    <task id="LOCAL-00022" summary="id's pararam de ficar duplicados nas tabelas do banco.">
+      <option name="closed" value="true" />
+      <created>1793036532698</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1793036532698</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Rotas de vagas definidas e swwager funcionando">
+      <option name="closed" value="true" />
+      <created>1793036938790</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1793036938790</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Testes unitarios feitos...">
+      <option name="closed" value="true" />
+      <created>1793729601120</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1793729601120</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Pasta de front criada no rep. para rodar o backend abra apenas a pasta de back no intelij e a de front no vs">
+      <option name="closed" value="true" />
+      <created>1794229140206</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1794229140206</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adicionei o a dependencia do Spring Securuty ao projeto" />
+    <MESSAGE value="Estrutura principal de MVC Criado;&#10;Conexão com SupaBase feito no application.properties;&#10;Inicio do desenvolvimento do Api de Vagas com Entity, dtos e Enum" />
+    <MESSAGE value="Atualização do README e desenvolvimento De vagas GET, POST e DELETE" />
+    <MESSAGE value="Atualização do README para conexão com supaBAse" />
+    <MESSAGE value="Crud completo de Vagas funcionando, faltando apenas terminar o tratamento de erros" />
+    <MESSAGE value="Configurando o sistema de Roles e permitions dos Usuarios Admin,Empregador e Candidato ( ja inseri as permissoes de vagas ao banco)" />
+    <MESSAGE value="Sistema de login e criptografia de senha funcionando... Falta apenas criar sistema de tokwn" />
+    <MESSAGE value="entidades de usuario e empregador criadas" />
+    <MESSAGE value="Atualização das vagas com Salario piso-teto" />
+    <MESSAGE value="Atualização do spring security liberando o swagger." />
+    <MESSAGE value="Atualização da entidade de vagas agora tem StatusEnum.ABERTA e StatusEnum.ENCERRADA e é default Aberta" />
+    <MESSAGE value="Atualização da VagaService agora esta passando status no dtoToentity e entityToDTO" />
+    <MESSAGE value="Sempre que um empregador é criado a API de CEP é consumida e preenche os campos necessarios.&#10;Endpoint de Empregador criado POST E PUT falta o GET" />
+    <MESSAGE value="Get empregador/id foi desenvolvido e foi adicionado mais 12 Permissoes e ja foram inseridas no banco de dados." />
+    <MESSAGE value="Login sem JWT funcionando e listar todos os empregadores" />
+    <MESSAGE value="Pesquisa de titulo, modalidade, status da vaga aberta desenvolvidos." />
+    <MESSAGE value="id's pararam de ficar duplicados nas tabelas do banco." />
+    <MESSAGE value="Rotas de vagas definidas e swwager funcionando" />
+    <MESSAGE value="Testes unitarios feitos..." />
+    <MESSAGE value="Pasta de front criada no rep. para rodar o backend abra apenas a pasta de back no intelij e a de front no vs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pasta de front criada no rep. para rodar o backend abra apenas a pasta de back no intelij e a de front no vs" />
+  </component>
+</project>
